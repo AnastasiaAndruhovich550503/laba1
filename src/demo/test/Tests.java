@@ -32,26 +32,27 @@ public class Tests {
 
     @Test
     public void divRe1() {
-        assertTrue("Test divRe1 failed in method div of class demo.parallel.Complex", a.div(b).getRe() == res1.getRe());
+        assertTrue("Test divRe1 failed in method div of class demo.parallel.Complex. (-2 + i) / (1 - i). Expected: (-1.5 - 0.5i)", a.div(b).getRe() == res1.getRe());
     }
+
 
     @Test
     public void divIm1() {
-        assertTrue("Test divIm1 failed in method div of class demo.parallel.Complex",a.div(b).getIm() == res1.getIm());
+        assertTrue("Test divIm1 failed in method div of class demo.parallel.Complex. (-2 + i) / (1 - i). Expected: (-1.5 - 0.5i)", a.div(b).getIm() == res1.getIm());
     }
 
     @Test
     public void divRe2() {
-        assertTrue("Test divRe2 failed in method div of class demo.parallel.Complex",b.div(a).getRe() == res2.getRe());
+        assertTrue("Test divRe2 failed in method div of class demo.parallel.Complex. (1 - i) / (-2 + i). Expected: (-0.6 + 0.2i)", b.div(a).getRe() == res2.getRe());
     }
 
     @Test
     public void divIm2() {
-        assertTrue("Test divIm2 failed in method div of class demo.parallel.Complex",b.div(a).getIm() == res2.getIm());
+        assertTrue("Test divIm2 failed in method div of class demo.parallel.Complex. (1 - i) / (-2 + i). Expected: (-0.6 + 0.2i)", b.div(a).getIm() == res2.getIm());
     }
 
     @Test(expected = ArithmeticException.class)
-    public void divNegative() {
+    public void divNull() {
         a.div(c);
     }
 }

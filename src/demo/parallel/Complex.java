@@ -76,16 +76,6 @@ public class Complex {
     }
 
     /**
-     * Module operation.
-     *
-     * @return double object whose value is module of Complex this
-     */
-    public double abs() {
-        double mod = Math.sqrt(re * re + im * im);
-        return mod;
-    }
-
-    /**
      * Add operation.
      *
      * @param b summand
@@ -115,8 +105,8 @@ public class Complex {
     /**
      * Division operation.
      *
-     * @param b devider
-     * @exception ArithmeticException if devider is null.
+     * @param b divider
+     * @exception ArithmeticException if divider is null.
      * @return this Complex object whose value is this / b
      */
     public Complex div(Complex b) throws ArithmeticException{
